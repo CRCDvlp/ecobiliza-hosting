@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+
+<div class="container text-center">
+    <div class="thumbnail padding">
+        <h2 class="text-center">Iniciar sesion</h2>
+        <br>
+        <div class="alert alert-success" *ngIf="operacion" role="alert">{{ operacion }}</div>
+        <div class="row padding">
+            <div class="col-md-4 col-sm-4 col-xs-4"><p class="text-left">Email</p></div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <input type="email" class="form-control" placeholder="Email" [(ngModel)]="loginObj.usuario">
+            </div>
+        </div>
+        <div class="row padding">
+            <div class="col-md-4 col-sm-4 col-xs-4"><p class="text-left">Password</p></div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="loginObj.contra">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 padding">
+                <button class="btn btn-default" (click)="iniciarSesion()">Iniciar sesion</button>
+            </div>
+        </div>
+    </div>
+</div>
