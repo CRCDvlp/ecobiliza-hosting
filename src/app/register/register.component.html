@@ -1,4 +1,121 @@
 <app-menu></app-menu>
-<p>
-  register works!
-</p>
+
+<div class="container">
+  <div class="container">
+    <h1><small>Documentos de conductor</small></h1>
+    <div class="thumbnail form-container">
+      <h4>Selfie
+        <small>Toma una foto tuya</small>
+      </h4>
+      <img class="thumbnail img-responsive" [src]="conductor.selfie" id="file">
+      <input type="file" class="form-control" [(ngModel)]="conductor.selfie" (change)="updateSelfie($event)">
+      <button (click)="updateProfilePhoto()" class="btn btn-danger">Update</button>
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Licencia
+        <small>Toma una foto de tu licencia</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.licencia">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Antecedentes no penales
+        <small>Fotografpia o documento</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.antecedentes">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>INE
+        <small>Fotografía de tu identificación</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.ine">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Comporbante de domicilio
+        <small>Fotografía de tu comprobante de domicilio</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.domicilio">
+    </div>
+
+    <h1><small>Datos de conductor</small></h1>
+
+    <div class="thumbnail form-container">
+      <h4>Nombre del dueño
+        <small>Nombre completo del dueño del auto</small>
+      </h4>
+      <input type="text" class="form-control" [(ngModel)]="conductor.propietario">
+    </div>
+    <div class="thumbnail form-container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <input type="text" class="form-control" placeholder="Nombre conductor" [(ngModel)]="conductor.nombre">
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <input type="email" class="form-control" placeholder="Email" [(ngModel)]="conductor.email">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <input type="number" class="form-control" placeholder="Numero telefonico" [(ngModel)]="conductor.celular">
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="conductor.password">
+        </div>
+      </div>
+    </div>
+    <h1><small>Datos del automovil</small></h1>
+    <div class="thumbnail form-container">
+      <h4>Poliza de seguro
+        <small>Fotografia de la poliza del taxi</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.seguro">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Tarjeta de circulación
+        <small>Fotografía de la tarjeta de circulación</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.tarjetacirculacion">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>TAG
+        <small>Fotografía del TAG</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.tag">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Cuenta bancaria
+        <small>Numero de cuenta en la que se recibirán los pagos</small>
+      </h4>
+      <input type="number" class="form-control" [(ngModel)]="conductor.cuenta">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Placas
+        <small>Placas del automovil</small>
+      </h4>
+      <input type="text" class="form-control" [(ngModel)]="conductor.placas">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Modelo
+        <small>Escribe el modelo versión y año del automovil</small>
+      </h4>
+      <input type="text" class="form-control" [(ngModel)]="conductor.modelo">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Foto del autmovil
+        <small>Toma una foto del automovl</small>
+      </h4>
+      <input type="file" class="form-control" [(ngModel)]="conductor.fotoauto">
+    </div>
+    <div class="thumbnail form-container">
+      <h4>Verifica que todos tus datos sean correctos antes de enviar el formulario</h4>
+      <div class="text-center">
+        <div class="progress" *ngIf="">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+            60%
+          </div>
+        </div>
+        <button class="btn btn-default btn-sm" (click)="registrarConductor()">Enviar formulario</button>
+      </div>
+    </div>
+  </div>
+</div>

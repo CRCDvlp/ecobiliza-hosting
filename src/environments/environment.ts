@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAmCASvbW-Uz6Eg4sQ_XJPqOxwkiRist7c",
-    authDomain: "ecotravelpro.firebaseapp.com",
-    databaseURL: "https://ecotravelpro.firebaseio.com",
-    projectId: "ecotravelpro",
-    storageBucket: "ecotravelpro.appspot.com",
-    messagingSenderId: "882770759916"
+    apiKey: "AIzaSyCwXW-Em503hvj-u2zv2Och82n4wKyfTAw",
+    authDomain: "ecobiliza.firebaseapp.com",
+    databaseURL: "https://ecobiliza.firebaseio.com",
+    projectId: "ecobiliza",
+    storageBucket: "ecobiliza.appspot.com",
+    messagingSenderId: "1054110425083"
   }
 };
